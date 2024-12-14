@@ -1,0 +1,244 @@
+/*shéma explicatif oraganisation d'une page*/
+/*
+Header
+	ttx
+	Nav
+Article
+	Aside
+		Section
+	Footer
+*/
+
+	/*****INFLUENCE LA PAGE ENTIERE*****/
+html{
+	scroll-behavior: smooth;
+}
+body {
+	background-color: whitesmoke;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#conteneur_grid {
+	display: grid;
+	grid-template-columns: 100vw ;/*une seul colone*/
+	grid-template-rows: 20vh 80vh ;/*deux lignes, header et article*/
+	grid-template-areas:
+		"etiq_header"
+		"etiq_aside "
+}
+img:hover{
+	opacity: 60%;
+}
+
+	/******INFLUENCE LE HEADER******/
+header {
+	padding: 0;
+	background:linear-gradient(#c19780 60%, whitesmoke);
+	grid-area: etiq_header;
+	text-align: center;
+	min-height: 20vh;
+}
+#en-tête{
+	display: flex;
+	flex-wrap: wrap;/*alignement des elements dans la flexbox*/
+	justify-content: center;
+}
+#photo{
+	background: radial-gradient(whitesmoke, #9f7259);
+	border-radius: 50px;
+	border: 1px #54468f solid;
+	width: 9vw;
+	height: 9vh;
+	margin: 0.5vh;
+}
+header a:hover{
+	color:red;
+}
+header h1{
+	font-family: Snell Roundhand, Apple Chancery, Brush Script Std, Brush Script MT;
+	font-style: italic;
+	font-style: oblique;
+	font-size: x-large;
+	color: #030a3d;
+	pading: 0 0 0 0 ;
+}
+/*****INFLUENCE LE NAV DANS LE HEADER*****/
+nav {
+	font-family: Snell Roundhand, Apple Chancery, Brush Script Std, Brush Script MT;
+	font-size: x-large;
+	color: black;
+	text-align: center;
+	background:url("https://i.ibb.co/fCMFFpQ/grass-8020116-1280.jpg");
+	background-position: 50%;
+	border-radius: 10px;
+	border: 2px #54468f solid;
+	max-width: 900px;
+}
+nav	p{
+	display: inline;
+}
+nav a{
+	color: black;
+}
+nav{
+	margin: 0vh auto 0vh auto;
+	padding: 0;
+}
+nav img{
+	max-height: 6vh;
+	margin: 0;
+}
+
+	/******INFLUENCE LE ASIDE******/
+aside {
+	grid-area: etiq_aside;
+	padding: 0;
+	overflow: scroll;/*pour scroller*/
+	text-align: center;
+	min-height: 80vh;
+}
+aside a{
+	color: #340059;
+}
+aside a:hover{
+	color: #54468f;
+	font-weight: bold;
+}
+/******INFLUENCE L'ARTICLE DANS L'ASIDE******/
+article {
+	font-style: italic;
+	font-size: medium;
+	margin: 0 0.3vw 0 0.3vw;
+	padding: 0vh 3vw 0vh 3vw;
+	min-height: 70vh;
+	color: #030a3d;
+
+}
+/******INFLUENCE LES SECTIONS DANS L'ARTICLE DANS L'ASIDE******/
+article h2 {
+	background: #c19780;/*radial-gradient(#9f7259, whitesmoke);*/
+	text-align: center;
+	color: #030a3d;
+	position: sticky;
+	font-size: large;
+	top: -1px;
+	border-radius: 20% 20% / 20% 20%;
+	border: 2px #54468f solid;
+  	z-index: 10;
+}
+/*pour la page fromations*/
+#Spécialités h3{
+	font-weight: regular;
+	text-align: left;
+	text-indent: 2em;
+}
+#Spécialités h4{
+	font-weight: light;	
+	text-align: left;
+	text-indent: 4em;
+}
+#Spécialités p{
+	text-align: left;
+	text-indent: 6em;
+}
+article h5{
+	font-weight: bold;
+	color: black;
+	font-style: oblique;
+}
+#Spécialités h5 a{
+	color: Black;
+}
+section #D img{
+	height: 10vh;
+	border: 2px whitesmoke; solid;
+}
+/****POUR LES BOITES PAGE HOME****/
+#Flexbox{
+	display: flex;
+	flex-wrap: wrap;/*alignement des elements dans la flexbox*/
+	justify-content: center;
+	position: relative;
+  	z-index: 5;
+}
+#Flexbox_item{
+	background: radial-gradient(whitesmoke 50%, #c19780);/*#9f7259*/
+	border: black 1px solid;
+	padding:1vw 2vw 1vw 2vw ;
+	margin: 1vw;
+	border-radius: 10px;
+	opacity: 0.8;
+	max-width: 30vw;
+	min-width: 20vw;
+}
+#Flexbox_item #invisible{
+	visibility: collapse;
+	/*pour que l'elements soit invisible et que l'espace utiliser soit invisible égalements*/
+	max-width: 0;
+	max-height: 0;
+}
+#Flexbox_item:hover #invisible{
+    visibility: visible;/*pour que l'éléments apparaisse*/
+    max-width: 100%;
+    max-height: 100%;
+}
+#Flexbox_item:hover{
+	background: radial-gradient(whitesmoke 5%, #c19780);
+	border: black 3px solid;
+	opacity: 1;
+}
+/*carte google map*/
+iframe{
+	border-radius: 70px;
+	max-width: 60vw;
+	max-height: 30vh;
+}
+#flèche_haut{
+	width: 5vw;
+	height: auto;
+}
+/******POUR LES SKILLS BARS******/
+/*info sur: https://codepen.io/aashu11267/pen/wvKOjmK*/
+.bar{ /*style the bar*/
+	background-color: grey;
+	display: block;
+	height: 1vh;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 0 10px sienna;
+}
+.bar span{ /*style the span tag*/
+	height: 1vh;
+	float: left;
+	background-color: Sienna;
+}
+.Notes{ /*set skills and animation of Notes*/
+	width: 80%;
+	animation: Notes 2s;
+}
+@keyframes Notes{ /*animate Notes skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 80%;
+	}
+}
+/******INFLUENCE LE FOOTER DANS L'ASIDE******/
+footer {
+	background: linear-gradient(to top,#9f7259 60%, whitesmoke);
+	text-align: center;
+	font-size: x-small;
+	padding-top: 0;
+	margin: 0;
+	height: 10vh;
+	min-height: 10vh;
+}
+footer p{
+	position: relative;
+	bottom: 0px;
+	padding: 3vh;
+}
