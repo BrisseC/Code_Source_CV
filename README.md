@@ -1,2 +1,1 @@
-Les fichiers présent dans ce répertoire sont le résultats d'un travail personnel, il n'y a aucun lien avec un site web déja existant ni avec aucune IA. Merci de rester respectueux du travail fournie.
-Les Images présente sont tout sous licence publique et viennet de la banque d'Image de pixabay.
+Les fichiers présents dans ce répertoire sont les résultats d'un travail personnel, il n'y a aucun lien avec un site web déjà existant ni avec aucune IA. Merci de rester respectueux du travail fourni. Les images présentes sont toutes sous licence publique et viennent de la banque d'images de Pixabay
