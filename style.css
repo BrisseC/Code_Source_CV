@@ -45,12 +45,16 @@ header {
 	justify-content: center;
 }
 #photo{
-	background: radial-gradient(whitesmoke, #9f7259);
-	border-radius: 50px;
+	background-image: url("Images/cc.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
 	border: 1px #54468f solid;
-	width: 9vw;
-	height: 9vh;
+	width: 5vw;
+	height: 5vw;
 	margin: 0.5vh;
+	position: relative;
 }
 header a:hover{
 	color:red;
@@ -69,7 +73,7 @@ nav {
 	font-size: x-large;
 	color: black;
 	text-align: center;
-	background:url("https://i.ibb.co/fCMFFpQ/grass-8020116-1280.jpg");
+	background:url("Images/nav.jpg");
 	background-position: 50%;
 	border-radius: 10px;
 	border: 2px #54468f solid;
@@ -127,6 +131,22 @@ article h2 {
 	border: 2px #54468f solid;
   	z-index: 10;
 }
+/**BOITE PHOTO PERCENT**/
+#Percent{
+	display: flex;
+	flex-wrap: wrap;/*alignement des elements dans la flexbox*/
+	justify-content: center;
+	height: 50vh;
+	border: 5px black; solid;
+	position: sticky;
+}
+#un{
+	opacity: 1;
+	border-radius: 5px;
+	border: 5px #54468f double;
+	width: auto;
+	height: 50%;
+}
 /*pour la page fromations*/
 #Spécialités h3{
 	font-weight: regular;
@@ -151,8 +171,9 @@ article h5{
 	color: Black;
 }
 section #D img{
-	height: 10vh;
-	border: 2px whitesmoke; solid;
+	width: 25vw;
+	border: 2px whitesmoke solid;
+	margin: 0vh 10vw 0vh 10vw;
 }
 /****POUR LES BOITES PAGE HOME****/
 #Flexbox{
@@ -164,39 +185,33 @@ section #D img{
 }
 #Flexbox_item{
 	background: radial-gradient(whitesmoke 50%, #c19780);/*#9f7259*/
-	border: black 1px solid;
-	padding:1vw 2vw 1vw 2vw ;
+	border: #54468f 1px solid;
+	padding:auto ;
 	margin: 1vw;
 	border-radius: 10px;
 	opacity: 0.8;
 	max-width: 30vw;
 	min-width: 20vw;
 }
-#Flexbox_item #invisible{
-	visibility: collapse;
-	/*pour que l'elements soit invisible et que l'espace utiliser soit invisible égalements*/
-	max-width: 0;
-	max-height: 0;
-}
-#Flexbox_item:hover #invisible{
-    visibility: visible;/*pour que l'éléments apparaisse*/
-    max-width: 100%;
-    max-height: 100%;
-}
+
 #Flexbox_item:hover{
 	background: radial-gradient(whitesmoke 5%, #c19780);
-	border: black 3px solid;
+	border: #54468f 3px solid;
 	opacity: 1;
 }
 /*carte google map*/
 iframe{
 	border-radius: 70px;
-	max-width: 60vw;
-	max-height: 30vh;
+	max-width: 35vw;
+	max-height: auto;
+	margin: 0vh 5vw 0vh 5vw;
 }
 #flèche_haut{
 	width: 5vw;
 	height: auto;
+	position: absolute;
+	bottom: 5vh;
+	left: 1vw;
 }
 /******POUR LES SKILLS BARS******/
 /*info sur: https://codepen.io/aashu11267/pen/wvKOjmK*/
@@ -204,29 +219,405 @@ iframe{
 	background-color: grey;
 	display: block;
 	height: 1vh;
+	width: 90%;
 	border: 1px solid rgba(0,0,0,0.3);
 	border-radius: 3px;
 	overflow: hidden;
-	box-shadow: 0 0 10px sienna;
+	margin: 2px auto 2px auto;
 }
 .bar span{ /*style the span tag*/
 	height: 1vh;
 	float: left;
 	background-color: Sienna;
 }
-.Notes{ /*set skills and animation of Notes*/
-	width: 80%;
-	animation: Notes 2s;
-}
-@keyframes Notes{ /*animate Notes skills*/
-	0%{
-		width: 0%;
-	}
+/******NOTES BREVET ET BAC******/
+	/***NOTES BREVET***/
+		/*Notes français*/
+		.Notes_br_fr{ /*set skills and animation of Notes*/
+			width: 55%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_br_fr{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
 
-	100%{
-		width: 80%;
-	}
-}
+			100%{
+				width: 55%;
+			}
+		}
+		/*Notes Mathématiques*/
+		.Notes_br_ma{ /*set skills and animation of Notes*/
+			width: 61%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_br_ma{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 61%;
+			}
+		}
+		/*Notes Histoire, géo, EMC*/
+		.Notes_br_hgemc{ /*set skills and animation of Notes*/
+			width: 50%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_br_hgemc{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 50%;
+			}
+		}
+		/*Notes Sciences*/
+		.Notes_br_sc{ /*set skills and animation of Notes*/
+			width: 85%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_br_sc{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 85%;
+			}
+		}
+		/*Notes Soutenance oral*/
+		.Notes_br_o{ /*set skills and animation of Notes*/
+			width: 94%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_br_o{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 94%;
+			}
+		}
+		/*Notes socle commun*/
+		.Notes_br_comm{ /*set skills and animation of Notes*/
+			width: 80%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_br_comm{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 80%;
+			}
+		}
+	/***Notes BAC***/
+		/*Notes Français ecrit*/
+		.Notes_ba_fre{ /*set skills and animation of Notes*/
+			width: 65%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_ba_fre{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 65%;
+			}
+		}
+		/*Notes Français oral*/
+		.Notes_ba_fro{ /*set skills and animation of Notes*/
+			width: 75%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_ba_fro{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 75%;
+			}
+		}
+		/*Notes Philosophie*/
+		.Notes_ba_ph{ /*set skills and animation of Notes*/
+			width: 35%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_ba_ph{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 35%;
+			}
+		}
+		/*Notes Grand Oral*/
+		.Notes_ba_go{ /*set skills and animation of Notes*/
+			width: 95%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_ba_go{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 95%;
+			}
+		}
+		/*Notes NSI*/
+		.Notes_ba_nsi{ /*set skills and animation of Notes*/
+			width: 90%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_ba_nsi{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 90%;
+			}
+		}
+		/*Notes SVT*/
+		.Notes_ba_svt{ /*set skills and animation of Notes*/
+			width: 60%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_ba_svt{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 60%;
+			}
+		}
+		/*Notes Histoire géographie */
+			/*Première*/
+			.Notes_ba_hg1{ /*set skills and animation of Notes*/
+				width: 79.5%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_hg1{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 79.5%;
+				}
+			}
+			/*Terminale*/
+			.Notes_ba_hgT{ /*set skills and animation of Notes*/
+				width: 67%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_hgT{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 67%;
+				}
+			}
+		/*Notes Enseignement Moral et Civique*/
+			/*Note 1ère*/
+			.Notes_ba_emc1{ /*set skills and animation of Notes*/
+				width: 80%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_emc1{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 80%;
+				}
+			}
+			/*Note Terminale*/
+			.Notes_ba_emcT{ /*set skills and animation of Notes*/
+				width: 79%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_emcT{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 79%;
+				}
+			}
+		/*Notes Anglais*/
+			/*Note 1ère*/
+			.Notes_ba_ang1{ /*set skills and animation of Notes*/
+				width: 43.5%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_angT{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 43.5%;
+				}
+			}
+			/*Note Terminale*/
+			.Notes_ba_angT{ /*set skills and animation of Notes*/
+				width: 44.5%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_angT{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 44.5%;
+				}
+			}
+		/*Notes Espagnol*/
+			/*Note 1ère*/
+			.Notes_ba_esp1{ /*set skills and animation of Notes*/
+				width: 59.5%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_esp1{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 59.5%;
+				}
+			}
+			/*Note terminale*/
+			.Notes_ba_espT{ /*set skills and animation of Notes*/
+				width: 56%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_espT{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 56%;
+				}
+			}
+		/*Notes Enseignement Scientifique*/
+			/*Note 1ère*/
+			.Notes_ba_es1{ /*set skills and animation of Notes*/
+				width: 61%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_es1{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 61%;
+				}
+			}
+			/*Note Terminale*/
+			.Notes_ba_esT{ /*set skills and animation of Notes*/
+				width: 54.5%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_esT{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 54.5%;
+				}
+			}
+		/*Note EPS*/
+		.Notes_ba_eps{ /*set skills and animation of Notes*/
+			width: 75%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_ba_eps{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 75%;
+			}
+		}
+		/*Note HGGSP*/
+		.Notes_ba_hggsp{ /*set skills and animation of Notes*/
+			width: 70%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_ba_hggsp{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 70%;
+			}
+		}
+		/*Notes artsplastiques*/
+			/*Notes 1ère*/
+			.Notes_ba_arts1{ /*set skills and animation of Notes*/
+				width: 82%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_arts1{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 82%;
+				}
+			}
+			/*Note Terminale*/
+			.Notes_ba_artsT{ /*set skills and animation of Notes*/
+				width: 82.5%;
+				animation: Notes 2s;
+			}
+			@keyframes Notes_ba_artsT{ /*animate Notes skills*/
+				0%{
+					width: 0%;
+				}
+
+				100%{
+					width: 82.5%;
+				}
+			}
+		/*Notes mathématiques compléménetaires*/
+		.Notes_ba_ma{ /*set skills and animation of Notes*/
+			width: 65%;
+			animation: Notes 2s;
+		}
+		@keyframes Notes_ba_ma{ /*animate Notes skills*/
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 65%;
+			}
+		}
+
 /******INFLUENCE LE FOOTER DANS L'ASIDE******/
 footer {
 	background: linear-gradient(to top,#9f7259 60%, whitesmoke);
